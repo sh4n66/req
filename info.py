@@ -50,7 +50,7 @@ BOT_TOKEN = environ.get('BOT_TOKEN', 'None')
 CACHE_TIME = int(environ.get('CACHE_TIME', 300))
 USE_CAPTION_FILTER = bool(environ.get('USE_CAPTION_FILTER', False))
 PICS = (environ.get('PICS', 'https://telegra.ph/file/ac5042aa8aaddea9309a5.jpg')).split()
-NOR_IMG = environ.get('NOR_IMG', "https://telegra.ph/file/d741fef5a689a9ed9f960.jpg")
+NOR_IMG = environ.get('NOR_IMG', "https://telegra.ph/file/e0d96d26b76654a7a9f4c.jpg")
 SPELL_IMG = environ.get('SPELL_IMG',"https://te.legra.ph/file/e5fd8c6bc6580bea9fa28.jpg")
 
 # Welcome area
