@@ -8,5 +8,5 @@ else
 fi
 cd /Elsa
 pip3 install -U -r requirements.txt
-echo "𝙎𝙩𝙖𝙧𝙩𝙞𝙣𝙜....🧞‍♂️"
+echo "𝙎𝙩𝙖𝙧𝙩𝙞𝙣𝙜 𝘾𝙏 𝘼𝙪𝙩𝙤𝙛𝙞𝙡𝙩𝙚𝙧...🧞‍♂️"
 python3 bot.py
