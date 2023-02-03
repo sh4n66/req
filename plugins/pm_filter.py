@@ -666,7 +666,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
     elif query.data == "source":
         buttons = [[
             InlineKeyboardButton('ʀᴇᴘᴏ', url='https://t.me/CT_Arena/135'),
-            InlineKeyboardButton('ʙᴀᴄᴋ', callback_data='about')
+            InlineKeyboardButton('ʙᴀᴄᴋ', callback_data='start')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
@@ -866,7 +866,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         )
     elif query.data == "deploy":
         buttons = [[
-           InlineKeyboardButton('ʀᴇᴘᴏ', url='https://t.me/Sathan_of_Telegram'),
+           InlineKeyboardButton('ʀᴇᴘᴏ', url='https://t.me/CT_Arena/135'),
            InlineKeyboardButton('ᴏᴡɴᴇʀ', url='https://t.me/Sathan_of_Telegram')
         ], [
             InlineKeyboardButton('⇍Bᴀᴄᴋ', callback_data='help')
