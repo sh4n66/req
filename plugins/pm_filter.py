@@ -158,14 +158,7 @@ async def next_page(bot, query):
             InlineKeyboardButton(f' 🎬 {search} 🎬 ', 'qinfo')
         ]
     )
-    btn.insert(1, 
-         [
-             InlineKeyboardButton(f'📮 ɪɴꜰᴏ', 'reqinfo'),
-             InlineKeyboardButton(f'📟 ᴍᴏᴠɪᴇ', 'minfo'),
-             InlineKeyboardButton(f'🔰 sᴇʀɪᴇs', 'sinfo'),
-             InlineKeyboardButton(f'🎁 ᴛɪᴘs', 'tinfo')
-         ]
-    )
+    
 
     if 0 < offset <= 10:
         off_set = 0
@@ -1151,15 +1144,7 @@ async def auto_filter(client, msg, spoll=False):
             InlineKeyboardButton(f' 🎬 {search} 🎬 ', 'qinfo')
         ]
     )
-    btn.insert(1, 
-         [
-             InlineKeyboardButton(f'📮 ɪɴꜰᴏ', 'reqinfo'),
-             InlineKeyboardButton(f'📟 ᴍᴏᴠɪᴇ', 'minfo'),
-             InlineKeyboardButton(f'🔰 sᴇʀɪᴇs', 'sinfo'),
-             InlineKeyboardButton(f'🎁 ᴛɪᴘs', 'tinfo')
-         ]
-    )
-
+    
     if offset != "":
         key = f"{message.chat.id}-{message.id}"
         BUTTONS[key] = search
@@ -1207,7 +1192,7 @@ async def auto_filter(client, msg, spoll=False):
             **locals()
         )
     else:
-        cap = f"🎪 ᴛɪᴛɪʟᴇ {search}\n\n┏ 🤴 ᴀsᴋᴇᴅʙʏ : {message.from_user.mention}\n┣⚡ ᴘᴏᴡᴇʀᴇᴅ ʙʏ : <a href='https://t.me/{temp.U_NAME}'>ᴍᴀsᴛᴇʀ​</a>\n┗🍁 ᴄʜᴀɴɴᴇʟ : <a href='https://t.me/CT_Arena'>ᴄinemathattakam​</a>\n\nᴀꜰᴛᴇʀ 10 ᴍɪɴᴜᴛᴇꜱ ᴛʜɪꜱ ᴍᴇꜱꜱᴀɢᴇ ᴡɪʟʟ ʙᴇ ᴀᴜᴛᴏᴍᴀᴛɪᴄᴀʟʟʏ ᴅᴇʟᴇᴛᴇᴅ\n\n★ ᴘᴏᴡᴇʀᴇᴅ ʙʏ : {message.chat.title}"
+        cap = f"🎪 Hᴇʀᴇ Is Tʜᴇ Rᴇsᴜʟᴛs Fᴏʀ Yᴏᴜʀ Qᴜᴇʀʏ {search}\n\n🤴Aꜰᴛᴇʀ 10 ᴍɪɴᴜᴛᴇꜱ ᴛʜɪꜱ ᴍᴇꜱꜱᴀɢᴇ ᴡɪʟʟ ʙᴇ ᴀᴜᴛᴏᴍᴀᴛɪᴄᴀʟʟʏ ᴅᴇʟᴇᴛᴇᴅ\n\n★ ᴘᴏᴡᴇʀᴇᴅ ʙʏ : {message.chat.title}"
     if imdb and imdb.get('poster'):
         try:
             pic_fi=await message.reply_photo(photo=imdb.get('poster'), caption=cap[:1024],
