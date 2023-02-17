@@ -1248,7 +1248,7 @@ async def auto_filter(client, msg, spoll=False):
         try:
             if settings['auto_delete']:
                 await asyncio.sleep(600)
-                await no_fil.delete()
+                await no_fil.delete(600)
                 await message.delete()
         except KeyError:
             grpid = await active_connection(str(message.from_user.id))
