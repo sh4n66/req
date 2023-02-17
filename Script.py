@@ -305,7 +305,7 @@ Aᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ᴛᴏ sᴇᴇ ᴛʜᴇ ᴍᴀɢ�
     CUSTOM_FILE_CAPTION = """<b>📂Fɪʟᴇɴᴀᴍᴇ : <code>{file_name}</code>
 
 ╔═════•✧❅✦❅✧•═════╗
-▣ <a href=https://t.me/FILMCORNERALL> 📽FFILMCORNER</a>
+▣ <a href=https://t.me/FILMCORNERALL> 📽FILMCORNER</a>
 ▣ <a href=https://t.me/FILMCORNEROFFICIALGROUP>📽FILMCORNER​GROUP</a>
 ╚═════•✧❅✦❅✧•═════╝</b>"""
 
