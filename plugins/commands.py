@@ -70,7 +70,7 @@ async def start(client, message):
             ],[
             
             InlineKeyboardButton('⚠️ ʜᴇʟᴘ ⚠️', callback_data='help2'),
-            InlineKeyboardButton('✨ Sᴛᴀᴛs ✨', url=f"https://t.me/{temp.U_NAME}?start=stats)
+            InlineKeyboardButton('✨ Sᴛᴀᴛs ✨', url=f"https://t.me/{temp.U_NAME}?start=stats")
             ],[
             InlineKeyboardButton('🥇 Mᴀɪɴ Cʜᴀɴɴᴇʟ 🥇', url="https://t.me/FILMCORNERALL")
         ]]         
