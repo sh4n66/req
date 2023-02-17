@@ -46,7 +46,7 @@ async def start(client, message):
             InlineKeyboardButton('⚚ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ⚚', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
             ],[
             InlineKeyboardButton('⚠️ ʜᴇʟᴘ ⚠️ ', callback_data='help2'),
-            InlineKeyboardButton('✨ Sᴛᴀᴛs ✨', url=f"https://t.me/{temp.U_NAME}?start=stats)
+            InlineKeyboardButton('✨ Sᴛᴀᴛs ✨', url=f"https://t.me/{temp.U_NAME}?start=stats")
             ],[
             InlineKeyboardButton('🥇 Mᴀɪɴ Cʜᴀɴɴᴇʟ 🥇', url="https://t.me/FILMCORNERALL")
         ]]         
