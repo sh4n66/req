@@ -45,13 +45,10 @@ async def start(client, message):
         buttons = [[
             InlineKeyboardButton('⚚ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ⚚', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
             ],[
-            InlineKeyboardButton('💫 ᴄʀᴇᴅɪᴛs 💫', callback_data="credit_info"),
-            InlineKeyboardButton('🔱 ᴏᴡɴᴇʀ 🔱', callback_data="owner_info")
-            ],[      
             InlineKeyboardButton('⚠️ ʜᴇʟᴘ ⚠️ ', callback_data='help2'),
-            InlineKeyboardButton('✨ ᴀʙᴏᴜᴛ ✨', callback_data='about')
+            InlineKeyboardButton('✨ Sᴛᴀᴛs ✨', url=f"https://t.me/{temp.U_NAME}?start=stats)
             ],[
-            InlineKeyboardButton('🥇 sᴜᴘᴘᴏʀᴛ 🥇', callback_data="group_info")
+            InlineKeyboardButton('🥇 Mᴀɪɴ Cʜᴀɴɴᴇʟ 🥇', url="https://t.me/FILMCORNERALL")
         ]]         
         reply_markup = InlineKeyboardMarkup(buttons)
         m=await message.reply_sticker("CAACAgUAAxkBAAEOZdNj2S9tlg8fCuHg5gJ_MLJj3A3GXwACGAcAAimzaVe-HiqPelAOoB4E") 
@@ -71,13 +68,11 @@ async def start(client, message):
         buttons = [[
             InlineKeyboardButton('⚚ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ⚚', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
             ],[
-            InlineKeyboardButton('💫 ᴄʀᴇᴅɪᴛs 💫', callback_data="credit_info"),
-            InlineKeyboardButton('🔱 ᴏᴡɴᴇʀ 🔱', callback_data="owner_info")
-            ],[      
+            
             InlineKeyboardButton('⚠️ ʜᴇʟᴘ ⚠️', callback_data='help2'),
-            InlineKeyboardButton('✨ ᴀʙᴏᴜᴛ ✨', callback_data='about')
+            InlineKeyboardButton('✨ Sᴛᴀᴛs ✨', url=f"https://t.me/{temp.U_NAME}?start=stats)
             ],[
-            InlineKeyboardButton('🥇 sᴜᴘᴘᴏʀᴛ 🥇', callback_data="group_info")
+            InlineKeyboardButton('🥇 Mᴀɪɴ Cʜᴀɴɴᴇʟ 🥇', url="https://t.me/FILMCORNERALL")
         ]]         
         reply_markup = InlineKeyboardMarkup(buttons)
         await message.reply_photo(
