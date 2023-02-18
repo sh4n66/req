@@ -237,13 +237,18 @@ This module only works for my admins
 
 
 
-    STATUS_TXT = """<b>📂 ᴛᴏᴛᴀʟ ғɪʟᴇs: <code>{}</code>
+    STATUS_TXT = """<b>── • ❰ 📂 Bot DB Status 📂❱ • ──
+📑 ғɪʟᴇs sᴀᴠᴇᴅ: <code>{}</code>
 👤 ᴛᴏᴛᴀʟ ᴜsᴇʀs: <code>{}</code>
 ♻️ ᴛᴏᴛᴀʟ ᴄʜᴀᴛs: <code>{}</code>
 🗃️ ᴜsᴇᴅ sᴛᴏʀᴀɢᴇ: <code>{}</code> 𝙼𝚒𝙱
 🆓 ғʀᴇᴇ sᴛᴏʀᴀɢᴇ: <code>{}</code> 𝙼𝚒𝙱</b>
-🌀Dᴇᴠ :<a href='https://t.me/Sathan_Of_Telegram'>CLICK HERE</a></b>"""
 
+🌀 DEVELOPER :<a href='https://t.me/Sathan_Of_Telegram'>CLICK HERE</a></b>
+
+── • ❰🔅 𝐋𝐚𝐬𝐭 𝐔𝐩𝐝𝐚𝐭𝐞𝐝 🔅❱ • ──
+ 📆 𝐃ᴀᴛᴇ : <code>{}</code>
+ ⏰ 𝐓ɪᴍᴇ : <code>{}</code>"""
 
     CARB_TXT = """<b>Help</b> : 𝗖𝗔𝗥𝗕𝗢𝗡
 𝙲𝙰𝚁𝙱𝙾𝙽 𝙸𝚂 𝙰 𝙵𝙴𝚄𝚃𝚄𝚁𝙴 𝚃𝙾 𝙼𝙰𝙺𝙴 𝚃𝙷𝙴 𝙸𝙼𝙰𝙶𝙴 𝙰𝚂 𝚂𝙷𝙾𝚆𝙽 𝙸𝙽 𝚃𝙷𝙴 𝚃𝙾𝙿 𝚆𝙸𝚃𝙷 𝚈𝙾𝚄𝚁𝙴 𝚃𝙴𝚇𝚃𝚂.
