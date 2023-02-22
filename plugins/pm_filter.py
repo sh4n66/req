@@ -1225,7 +1225,7 @@ async def auto_filter(client, msg, spoll=False):
                     await message.delete()
         except Exception as e:
             logger.exception(e)
-            fmsg = await message.reply_text(cap, reply_markup=InlineKeyboardMarkup(btn))
+            no_fil=await message.reply_photo(caption=cap, reply_markup=InlineKeyboardMarkup(btn))
             try:
                 if settings['auto_delete']:
                     await asyncio.sleep(600)
@@ -1240,7 +1240,7 @@ async def auto_filter(client, msg, spoll=False):
                     await no_pic.delete()
                     await message.delete()
     else:
-        fmsg = await message.reply_text(cap, reply_markup=InlineKeyboardMarkup(btn))
+        no_fil=await message.reply_photo(caption=cap, reply_markup=InlineKeyboardMarkup(btn))
         try:
             if settings['auto_delete']:
                 await asyncio.sleep(600)
