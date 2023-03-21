@@ -1,7 +1,7 @@
 if [ -z $UPSTREAM_REPO ]
 then
   echo "Cloning main Repository"
-  git clone https://github.com/hemanthss2004/req-repo.git /Elsa
+  git clone https://github.com/hemanthss2004/req-repo/tree/hemanthss2004-patch-1 /Elsa
 else
   echo "Cloning Custom Repo from $UPSTREAM_REPO "
   git clone $UPSTREAM_REPO /Elsa
