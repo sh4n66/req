@@ -401,4 +401,8 @@ Aᴠᴀɪʟᴀʙʟᴇ ᴄᴏᴍᴍᴀɴᴅs:
 • /plink - <code>Jᴜsᴛ ʟɪᴋᴇ /link, ʙᴜᴛ ᴛʜᴇ ғɪʟᴇ ᴡɪʟʟ ʙᴇ sᴇɴᴅ ᴡɪᴛʜ ғᴏʀᴡᴀʀᴅ ʀᴇsᴛʀɪᴄᴛɪᴏɴ.</code>"""
 
 
-    AFTER_TXT = "Hey {} Your Search Result Is Deleted Due To © Issue So Please Request Again..."
+    AFTER_TXT = """Hᴇʏ Tʜᴇʀᴇ 👋, {} Yᴏᴜʀ Lᴀsᴛ Mᴏᴠɪᴇ Rᴇᴏ̨ᴜᴇsᴛ Hᴀs Bᴇᴇɴ Dᴇʟᴇᴛᴇᴅ 🛑 Bᴇᴄᴀᴜsᴇ Oғ Cᴏᴘʏʀɪɢʜᴛ Issᴜᴇs...©️.
+    Kɪɴᴅʟʏ Rᴇᴏ̨ᴜᴇsᴛ Aɢᴀɪɴ Fᴏʀ Yᴏᴜʀ Fɪʟᴇs ☺️
+    Tʜᴀɴᴋ Yᴏᴜ ❤️
+    Tᴇᴀᴍ [CT™]"""
+    
