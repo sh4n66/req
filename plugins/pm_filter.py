@@ -10,7 +10,7 @@ from Script import script
 import pyrogram
 from database.connections_mdb import active_connection, all_connections, delete_connection, if_active, make_active, \
     make_inactive
-from info import ADMINS, AUTH_CHANNEL, FILE_CHANNEL, AUTH_USERS, CUSTOM_FILE_CAPTION, NOR_IMG, AUTH_GROUPS, P_TTI_SHOW_OFF, IMDB, \
+from info import DEL_TIME, ADMINS, AUTH_CHANNEL, FILE_CHANNEL, AUTH_USERS, CUSTOM_FILE_CAPTION, NOR_IMG, AUTH_GROUPS, P_TTI_SHOW_OFF, IMDB, \
     SINGLE_BUTTON, SPELL_CHECK_REPLY, IMDB_TEMPLATE, SPELL_IMG, MSG_ALRT, FILE_FORWARD, MAIN_CHANNEL, LOG_CHANNEL, REQ_CHANNEL
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, CallbackQuery, InputMediaPhoto
 from pyrogram import Client, filters, enums
@@ -1226,12 +1226,12 @@ async def auto_filter(client, msg, spoll=False):
     mention = message.from_user.mention
     grp_id = message.chat.id
     try:
-        await asyncio.sleep(600)
+        await asyncio.sleep(DEL_TIME)
         await message.delete(True)
         await send.delete(True)
     except Exception as e:
         logger.exception(e)
-        await asyncio.sleep(600)
+        await asyncio.sleep(DEL_TIME)
         await message.delete(True)
         await send.delete(True)
     sts = await client.send_message(grp_id, script.AFTER_TXT.format(mention))
@@ -1297,7 +1297,7 @@ async def advantage_spell_chok(client, msg):
 
     try:
         if settings['auto_delete']:
-            await asyncio.sleep(600)
+            await asyncio.sleep(DEL_TIME)
             await spell_check_del.delete()
             await msg.delete()
     except KeyError:
@@ -1305,7 +1305,7 @@ async def advantage_spell_chok(client, msg):
             await save_group_settings(grpid, 'auto_delete', True)
             settings = await get_settings(message.chat.id)
             if settings['auto_delete']:
-                await asyncio.sleep(600)
+                await asyncio.sleep(DEL_TIME)
                 await spell_check_del.delete()
                 await msg.delete()
 
