@@ -1,3 +1,4 @@
+from pyrogram.errors import InputUserDeactivated, UserNotParticipant, FloodWait, UserIsBlocked, PeerIdInvalid
 from pyrogram import Client, filters
 from database.users_chats_db import db
 from info import ADMINS
@@ -12,7 +13,7 @@ async def broadcast_function(bot, message):
     done = 0
     blocked = 0
     deleted = 0
-    failed =0
+    failed = 0
     success = 0
     start_time = time.time()
     async for user in users:
