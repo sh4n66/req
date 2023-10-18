@@ -52,7 +52,7 @@ async def group_broadcast(bot, message):
     sts = await message.reply_text('Broadcasting your messages...')
     total_chats = await db.total_chat_count()
     done = 0
-    failed =0
+    failed = 0
     success = 0
     start_time = time.time()
     async for chat in chats:
