@@ -10,7 +10,7 @@ from Script import script
 import pyrogram
 from database.connections_mdb import active_connection, all_connections, delete_connection, if_active, make_active, \
     make_inactive
-from info import DEL_TIME, ADMINS, AUTH_CHANNEL, FILE_CHANNEL, AUTH_USERS, CUSTOM_FILE_CAPTION, NOR_IMG, AUTH_GROUPS, P_TTI_SHOW_OFF, IMDB, \
+from info import ADMINS, AUTH_CHANNEL, FILE_CHANNEL, NOR_IMG, AUTH_USERS, CUSTOM_FILE_CAPTION, AUTH_GROUPS, P_TTI_SHOW_OFF, IMDB, \
     SINGLE_BUTTON, SPELL_CHECK_REPLY, IMDB_TEMPLATE, SPELL_IMG, MSG_ALRT, FILE_FORWARD, MAIN_CHANNEL, LOG_CHANNEL, REQ_CHANNEL
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, CallbackQuery, InputMediaPhoto
 from pyrogram import Client, filters, enums
@@ -44,7 +44,7 @@ async def fil_mod(client, message):
       try: 
          args = message.text.split(None, 1)[1].lower() 
       except: 
-         return await message.reply("**𝙸𝙽𝙲𝙾𝙼𝙿𝙴𝚃𝙴𝙽𝚃 𝙲𝙾𝙼𝙼𝙰N𝙳...**")
+         return await message.reply("**𝙸𝙽𝙲𝙾𝙼𝙿𝙴𝚃𝙴𝙽𝚃 𝙲𝙾𝙼𝙼𝙰𝙳...**")
       
       m = await message.reply("**𝚂𝙴𝚃𝚃𝙸𝙽𝙶.../**")
 
@@ -135,7 +135,7 @@ async def next_page(bot, query):
         btn = [
             [
                 InlineKeyboardButton(
-                    text=f"🎭[CT™]☞ {get_size(file.file_size)} ➽ {file.file_name}", callback_data=f'files#{file.file_id}'
+                    text=f"▫️{get_size(file.file_size)} ⊳ {file.file_name}", callback_data=f'files#{file.file_id}'
                 ),
             ]
             for file in files
@@ -225,9 +225,7 @@ async def advantage_spoll_choker(bot, query):
             k = await query.message.edit(script.MVE_NT_FND)
             await asyncio.sleep(10)
             await k.delete()
-            await query.message.reply_to_message.delete()
-            await query.message.delete()
-            
+
 
 @Client.on_callback_query()
 async def cb_handler(client: Client, query: CallbackQuery):
@@ -455,7 +453,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 return
             elif settings['botpm']:
                 await query.answer(url=f"https://t.me/{temp.U_NAME}?start={ident}_{file_id}")
-                await query.answer('𝘾𝙝𝙚𝙘𝙠 𝙋𝙈, 𝙄 𝙝𝙖𝙫𝙚 𝙨𝙚𝙣𝙩 𝙛𝙞𝙡𝙚𝙨 𝙞𝙣 𝙥𝙢\n@Cinemathattakam_Group', show_alert=True)
+                await query.answer('𝘾𝙝𝙚𝙘𝙠 𝙋𝙈, 𝙄 𝙝𝙖𝙫𝙚 𝙨𝙚𝙣𝙩 𝙛𝙞𝙡𝙚𝙨 𝙞𝙣 𝙥𝙢\n@CV_offical', show_alert=True)
                 return
             else:
                 file_send=await client.send_cached_media(
@@ -477,9 +475,9 @@ async def cb_handler(client: Client, query: CallbackQuery):
                     reply_markup=InlineKeyboardMarkup(
                         [
                          [
-                          InlineKeyboardButton('📥 Rᴇᴏ̨ᴜᴇsᴛ Rᴇᴅɪʀᴇᴄᴛ Cʜᴀɴɴᴇʟ 📥 ', url = (FILE_FORWARD))
+                          InlineKeyboardButton('📥 𝖣𝗈𝗐𝗇𝗅𝗈𝖺𝖽 𝖫𝗂𝗇𝗄 📥 ', url = file_send.link)
                        ],[
-                          InlineKeyboardButton("⚠️ Nᴏᴡ Cʟɪᴄᴋ Hᴇʀᴇ Fᴏʀ Fɪʟᴇ 🥰 ⚠️", url=file_send.link)
+                          InlineKeyboardButton("⚠️ 𝖢𝖺𝗇'𝗍 𝖠𝖼𝖼𝖾𝗌𝗌 ❓ 𝖢𝗅𝗂𝖼𝗄 𝖧𝖾𝗋𝖾 ⚠️", url=(FILE_FORWARD))
                          ]
                         ]
                     )
@@ -496,7 +494,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             await query.answer(url=f"https://t.me/{temp.U_NAME}?start={ident}_{file_id}")
     elif query.data.startswith("checksub"):
         if (AUTH_CHANNEL or REQ_CHANNEL) and not await is_subscribed(client, query):
-            await query.answer("𝑰 𝑳𝒊𝒌𝒆 𝒀𝒐𝒖𝒓 𝑺𝒎𝒂𝒓𝒕𝒏𝒆𝒔𝒔, 𝑩𝒖𝒕 𝑫𝒐𝒏'𝒕 𝑩𝒆 𝑶𝒗𝒆𝒓𝒔𝒎𝒂𝒓𝒕 𝐒𝐚𝐭𝐡𝐚𝐧 𝐓𝐨𝐥𝐝 𝐌𝐞 𝐓𝐨 𝐒𝐚𝐲 😏", show_alert=True)
+            await query.answer("𝑰 𝑳𝒊𝒌𝒆 𝒀𝒐𝒖𝒓 𝑺𝒎𝒂𝒓𝒕𝒏𝒆𝒔𝒔, 𝑩𝒖𝒕 𝑫𝒐𝒏'𝒕 𝑩𝒆 𝑶𝒗𝒆𝒓𝒔𝒎𝒂𝒓𝒕 😏", show_alert=True)
             return
         ident, file_id = query.data.split("#")
         files_ = await get_file_details(file_id)
@@ -561,16 +559,16 @@ async def cb_handler(client: Client, query: CallbackQuery):
         await query.answer()
 
     elif query.data == "reqinfo":
-        await query.answer("⚠ ɪɴꜰᴏʀᴍᴀᴛɪᴏɴ ⚠\n\nᴀꜰᴛᴇʀ 10 ᴍɪɴᴜᴛᴇꜱ ᴛʜɪꜱ ᴍᴇꜱꜱᴀɢᴇ ᴡɪʟʟ ʙᴇ ᴀᴜᴛᴏᴍᴀᴛɪᴄᴀʟʟʏ ᴅᴇʟᴇᴛᴇᴅ\n\nɪꜰ ʏᴏᴜ ᴅᴏ ɴᴏᴛ ꜱᴇᴇ ᴛʜᴇ ʀᴇǫᴜᴇsᴛᴇᴅ ᴍᴏᴠɪᴇ / sᴇʀɪᴇs ꜰɪʟᴇ, ʟᴏᴏᴋ ᴀᴛ ᴛʜᴇ ɴᴇxᴛ ᴘᴀɢᴇ\n\n©Cinemathattakam_Group", show_alert=True)
+        await query.answer("⚠ ɪɴꜰᴏʀᴍᴀᴛɪᴏɴ ⚠\n\nᴀꜰᴛᴇʀ 10 ᴍɪɴᴜᴛᴇꜱ ᴛʜɪꜱ ᴍᴇꜱꜱᴀɢᴇ ᴡɪʟʟ ʙᴇ ᴀᴜᴛᴏᴍᴀᴛɪᴄᴀʟʟʏ ᴅᴇʟᴇᴛᴇᴅ\n\nɪꜰ ʏᴏᴜ ᴅᴏ ɴᴏᴛ ꜱᴇᴇ ᴛʜᴇ ʀᴇǫᴜᴇsᴛᴇᴅ ᴍᴏᴠɪᴇ / sᴇʀɪᴇs ꜰɪʟᴇ, ʟᴏᴏᴋ ᴀᴛ ᴛʜᴇ ɴᴇxᴛ ᴘᴀɢᴇ", show_alert=True)
 
     elif query.data == "minfo":
-        await query.answer("⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯\nᴍᴏᴠɪᴇ ʀᴇǫᴜᴇꜱᴛ ꜰᴏʀᴍᴀᴛ\n⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯\n\nɢᴏ ᴛᴏ ɢᴏᴏɢʟᴇ ➠ ᴛʏᴘᴇ ᴍᴏᴠɪᴇ ɴᴀᴍᴇ ➠ ᴄᴏᴘʏ ᴄᴏʀʀᴇᴄᴛ ɴᴀᴍᴇ ➠ ᴘᴀꜱᴛᴇ ᴛʜɪꜱ ɢʀᴏᴜᴘ\n\nᴇxᴀᴍᴘʟᴇ : ᴀᴠᴀᴛᴀʀ: ᴛʜᴇ ᴡᴀʏ ᴏғ ᴡᴀᴛᴇʀ\n\n🚯 ᴅᴏɴᴛ ᴜꜱᴇ ➠ ':(!,./)\n\n©Cinemathattakam_Group", show_alert=True)
+        await query.answer("⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯\nᴍᴏᴠɪᴇ ʀᴇǫᴜᴇꜱᴛ ꜰᴏʀᴍᴀᴛ\n⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯\n\nɢᴏ ᴛᴏ ɢᴏᴏɢʟᴇ ➠ ᴛʏᴘᴇ ᴍᴏᴠɪᴇ ɴᴀᴍᴇ ➠ ᴄᴏᴘʏ ᴄᴏʀʀᴇᴄᴛ ɴᴀᴍᴇ ➠ ᴘᴀꜱᴛᴇ ᴛʜɪꜱ ɢʀᴏᴜᴘ\n\nᴇxᴀᴍᴘʟᴇ : ᴀᴠᴀᴛᴀʀ: ᴛʜᴇ ᴡᴀʏ ᴏғ ᴡᴀᴛᴇʀ\n\n🚯 ᴅᴏɴᴛ ᴜꜱᴇ ➠ ':(!,./)", show_alert=True)
 
     elif query.data == "sinfo":
-        await query.answer("⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯\nꜱᴇʀɪᴇꜱ ʀᴇǫᴜᴇꜱᴛ ꜰᴏʀᴍᴀᴛ\n⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯\n\nɢᴏ ᴛᴏ ɢᴏᴏɢʟᴇ ➠ ᴛʏᴘᴇ ᴍᴏᴠɪᴇ ɴᴀᴍᴇ ➠ ᴄᴏᴘʏ ᴄᴏʀʀᴇᴄᴛ ɴᴀᴍᴇ ➠ ᴘᴀꜱᴛᴇ ᴛʜɪꜱ ɢʀᴏᴜᴘ\n\nᴇxᴀᴍᴘʟᴇ : ᴍᴏɴᴇʏ ʜᴇɪsᴛ S01E01\n\n🚯 ᴅᴏɴᴛ ᴜꜱᴇ ➠ ':(!,./)\n\n©Cinemathattakam_Group", show_alert=True)      
+        await query.answer("⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯\nꜱᴇʀɪᴇꜱ ʀᴇǫᴜᴇꜱᴛ ꜰᴏʀᴍᴀᴛ\n⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯\n\nɢᴏ ᴛᴏ ɢᴏᴏɢʟᴇ ➠ ᴛʏᴘᴇ ᴍᴏᴠɪᴇ ɴᴀᴍᴇ ➠ ᴄᴏᴘʏ ᴄᴏʀʀᴇᴄᴛ ɴᴀᴍᴇ ➠ ᴘᴀꜱᴛᴇ ᴛʜɪꜱ ɢʀᴏᴜᴘ\n\nᴇxᴀᴍᴘʟᴇ : ᴍᴏɴᴇʏ ʜᴇɪsᴛ S01E01\n\n🚯 ᴅᴏɴᴛ ᴜꜱᴇ ➠ ':(!,./)", show_alert=True)      
 
     elif query.data == "tinfo":
-        await query.answer("▣ ᴛɪᴘs ▣\n\n★ ᴛʏᴘᴇ ᴄᴏʀʀᴇᴄᴛ sᴘᴇʟʟɪɴɢ (ɢᴏᴏɢʟᴇ)\n\n★ ɪғ ʏᴏᴜ ɴᴏᴛ ɢᴇᴛ ʏᴏᴜʀ ғɪʟᴇ ɪɴ ᴛʜᴇ ʙᴜᴛᴛᴏɴ ᴛʜᴇɴ ᴛʜᴇ ɴᴇxᴛ sᴛᴇᴘ ɪs ᴄʟɪᴄᴋ ɴᴇxᴛ ʙᴜᴛᴛᴏɴ.\n\n★ ᴄᴏɴᴛɪɴᴜᴇ ᴛʜɪs ᴍᴇᴛʜᴏᴅ ᴛᴏ ɢᴇᴛᴛɪɴɢ ʏᴏᴜ ғɪʟᴇ\n\n\©Cinemathattakam_Group", show_alert=True)
+        await query.answer("▣ ᴛɪᴘs ▣\n\n★ ᴛʏᴘᴇ ᴄᴏʀʀᴇᴄᴛ sᴘᴇʟʟɪɴɢ (ɢᴏᴏɢʟᴇ)\n\n★ ɪғ ʏᴏᴜ ɴᴏᴛ ɢᴇᴛ ʏᴏᴜʀ ғɪʟᴇ ɪɴ ᴛʜᴇ ʙᴜᴛᴛᴏɴ ᴛʜᴇɴ ᴛʜᴇ ɴᴇxᴛ sᴛᴇᴘ ɪs ᴄʟɪᴄᴋ ɴᴇxᴛ ʙᴜᴛᴛᴏɴ.\n\n★ ᴄᴏɴᴛɪɴᴜᴇ ᴛʜɪs ᴍᴇᴛʜᴏᴅ ᴛᴏ ɢᴇᴛᴛɪɴɢ ʏᴏᴜ ғɪʟᴇ", show_alert=True)
 
     elif query.data == "surprise":
         btn = [[
@@ -622,25 +620,25 @@ async def cb_handler(client: Client, query: CallbackQuery):
         )
     elif query.data == "help":
         buttons = [[
-             InlineKeyboardButton('♪ ᴀᴜᴅɪᴏʙᴏᴏᴋ ♪', callback_data='abook'),
-             InlineKeyboardButton('☫ ᴄᴏᴜɴᴛʀʏ ☫', callback_data='country'),
-             InlineKeyboardButton('✠ ᴄᴀʀʙᴏɴ ✠', callback_data='carb')    
+             InlineKeyboardButton('ᴀᴜᴅʙᴏᴏᴋ', callback_data='abook'),
+             InlineKeyboardButton('ᴄᴏᴜɴᴛʀʏ', callback_data='country'),
+             InlineKeyboardButton('ᴄᴀʀʙᴏɴ', callback_data='carb')    
          ], [
-             InlineKeyboardButton('☻ ᴘɪɴɢ ☻', callback_data='pings'),
-             InlineKeyboardButton('◂ ᴊsᴏɴᴇ ▸', callback_data='json'),
-             InlineKeyboardButton('❆ sᴛɪᴄᴋɪᴅ ❆', callback_data='sticker')
+             InlineKeyboardButton('ᴘɪɴɢ', callback_data='pings'),
+             InlineKeyboardButton('ᴊsᴏɴᴇ', callback_data='json'),
+             InlineKeyboardButton('sᴛɪᴄᴋɪᴅ', callback_data='sticker')
          ], [
-             InlineKeyboardButton('♤ ᴡʜᴏɪs ♤', callback_data='whois'),
-             InlineKeyboardButton('☮ ᴜʀʟsʜᴏʀᴛ ☮', callback_data='urlshort'),
-             InlineKeyboardButton('✎ ɢᴛʀᴀɴs ✎', callback_data='gtrans')
+             InlineKeyboardButton('ᴡʜᴏɪs', callback_data='whois'),
+             InlineKeyboardButton('ᴜʀʟsʜᴏʀᴛ', callback_data='urlshort'),
+             InlineKeyboardButton('ɢᴛʀᴀɴs', callback_data='gtrans')
          ], [
-            InlineKeyboardButton('♬ sᴏɴɢ ♬', callback_data='song'),
-            InlineKeyboardButton('☼ ᴛᴛs ☼', callback_data='tts'),  
-            InlineKeyboardButton('⇜ ᴛɢʀᴀᴘʜ ⇝', callback_data='tele')     
+            InlineKeyboardButton('sᴏɴɢ', callback_data='song'),
+            InlineKeyboardButton('ᴛᴛs', callback_data='tts'),  
+            InlineKeyboardButton('ᴛɢʀᴀᴘʜ', callback_data='tele')     
          ], [
-            InlineKeyboardButton('◀ ᴠɪᴅᴇᴏ ▶', callback_data='video'),
-            InlineKeyboardButton('〄 ғᴏɴᴛ 〄', callback_data='font'),
-            InlineKeyboardButton('⊝ ᴅᴇᴘʟᴏʏ ⊝', callback_data='deploy')
+            InlineKeyboardButton('ᴠɪᴅᴇᴏ', callback_data='video'),
+            InlineKeyboardButton('ғᴏɴᴛ', callback_data='font'),
+            InlineKeyboardButton('ᴅᴇᴘʟᴏʏ', callback_data='deploy')
          ], [ 
             InlineKeyboardButton('↭ ʙᴀᴄᴋ ᴛᴏ ʜᴏᴍᴇ ​↭', callback_data='help2')
          ]]
@@ -667,8 +665,8 @@ async def cb_handler(client: Client, query: CallbackQuery):
         await query.answer("ᴋɴᴏᴡ ᴀʙᴏᴜᴛ ᴍᴇ 🥳")
     elif query.data == "source":
         buttons = [[
-            InlineKeyboardButton('ʀᴇᴘᴏ', url='https://t.me/CT_Arena/135'),
-            InlineKeyboardButton('ʙᴀᴄᴋ', callback_data='start')
+            InlineKeyboardButton('ʀᴇᴘᴏ', callback_data='about'),
+            InlineKeyboardButton('ʙᴀᴄᴋ', callback_data='about')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
@@ -868,8 +866,8 @@ async def cb_handler(client: Client, query: CallbackQuery):
         )
     elif query.data == "deploy":
         buttons = [[
-           InlineKeyboardButton('ʀᴇᴘᴏ', url='https://t.me/CT_Arena/135'),
-           InlineKeyboardButton('ᴏᴡɴᴇʀ', url='https://t.me/Sathan_of_Telegram')
+           InlineKeyboardButton('ʀᴇᴘᴏ', url='https://t.me/Strelizia_tg'),
+           InlineKeyboardButton('ᴏᴡɴᴇʀ', url='https://t.me/Strelizia_tg')
         ], [
             InlineKeyboardButton('⇍Bᴀᴄᴋ', callback_data='help')
         ]]
@@ -954,7 +952,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
     elif query.data == "owner_info":
         buttons = [[
             InlineKeyboardButton('⇍Bᴀᴄᴋ', callback_data='start'),
-            InlineKeyboardButton ('Cᴏɴᴛᴀᴄᴛ', url="t.me/Sathan_Of_Telegram")
+            InlineKeyboardButton ('Cᴏɴᴛᴀᴄᴛ', url="t.me/Strelizia_tg")
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
@@ -964,13 +962,13 @@ async def cb_handler(client: Client, query: CallbackQuery):
         )
     elif query.data == "group_info":
         buttons = [[
-            InlineKeyboardButton("Bᴏᴛ Dᴀᴛᴀʙᴀꜱᴇ", url="t.me/cinemathattakam_group")
+            InlineKeyboardButton("Bᴏᴛ Dᴀᴛᴀʙᴀꜱᴇ", url="https://t.me/+pfrDN32ZvVk4MDNl")
                   ],[
-            InlineKeyboardButton("Gʀᴏᴜᴘ", url="t.me/cinemathattakam_group"),
-            InlineKeyboardButton("​Cʜᴀɴɴᴇʟ", url="t.me/ct_arena")
+            InlineKeyboardButton("Gʀᴏᴜᴘ", url="https://t.me/+z4Q23t1RaWpmYmE9"),
+            InlineKeyboardButton("​Cʜᴀɴɴᴇʟ", url="t.me/cv_offical")
                   ],[
-            InlineKeyboardButton("Sᴜᴘᴘᴏʀᴛ", url="t.me/cinemathattakam_group"),
-            InlineKeyboardButton("Uᴘᴅᴀᴛᴇꜱ", url="t.me/ct_up_datess")
+            InlineKeyboardButton("Sᴜᴘᴘᴏʀᴛ", url="https://t.me/+jVP2bbMEe8FiOWE1"),
+            InlineKeyboardButton("Uᴘᴅᴀᴛᴇꜱ", url="t.me/cv_updatezz")
                   ],[
             InlineKeyboardButton("⇍Bᴀᴄᴋ", callback_data="start")
         ]]   
@@ -1129,7 +1127,7 @@ async def auto_filter(client, msg, spoll=False):
         btn = [
             [
                 InlineKeyboardButton(
-                    text=f"🎭[CT™]☞ {get_size(file.file_size)} ➽ {file.file_name}", callback_data=f'{pre}#{file.file_id}'
+                    text=f"▫️{get_size(file.file_size)} ⊳ {file.file_name}", callback_data=f'{pre}#{file.file_id}'
                 ),
             ]
             for file in files
@@ -1203,41 +1201,80 @@ async def auto_filter(client, msg, spoll=False):
             year=imdb['year'],
             genres=imdb['genres'],
             poster=imdb['poster'],
-            plot=imdb['plot'],
             rating=imdb['rating'],
             url=imdb['url'],
             **locals()
         )
     else:
-        cap = f"🎪 ᴛɪᴛɪʟᴇ {search}\n\n┏ 🤴 ᴀsᴋᴇᴅʙʏ : {message.from_user.mention}\n┣⚡ ᴘᴏᴡᴇʀᴇᴅ ʙʏ : <a href='https://t.me/{temp.U_NAME}'>ᴍᴀsᴛᴇʀ​</a>\n┗🍁 ᴄʜᴀɴɴᴇʟ : <a href='https://t.me/CT_Arena'>ᴄinemathattakam​</a>\n\nᴀꜰᴛᴇʀ 10 ᴍɪɴᴜᴛᴇꜱ ᴛʜɪꜱ ᴍᴇꜱꜱᴀɢᴇ ᴡɪʟʟ ʙᴇ ᴀᴜᴛᴏᴍᴀᴛɪᴄᴀʟʟʏ ᴅᴇʟᴇᴛᴇᴅ\n\n★ ᴘᴏᴡᴇʀᴇᴅ ʙʏ : {message.chat.title}"
+        cap = f"🎪 ᴛɪᴛɪʟᴇ: {search}\n\n┏ 🤴 ᴀsᴋᴇᴅʙʏ : {message.from_user.mention}\n┣⚡ ᴘᴏᴡᴇʀᴇᴅ ʙʏ : <a href='https://t.me/thehyo_joobot'>ʜyᴏ ᴊᴏᴏ​</a>\n┗🍁 ᴄʜᴀɴɴᴇʟ : <a href='https://t.me/CV_offical'>ᴄᴠ ᴏꜰꜰɪᴄɪᴀʟ​</a>\n\nᴀꜰᴛᴇʀ 10 ᴍɪɴᴜᴛᴇꜱ ᴛʜɪꜱ ᴍᴇꜱꜱᴀɢᴇ ᴡɪʟʟ ʙᴇ ᴀᴜᴛᴏᴍᴀᴛɪᴄᴀʟʟʏ ᴅᴇʟᴇᴛᴇᴅ\n\n★ ᴘᴏᴡᴇʀᴇᴅ ʙʏ : {message.chat.title}"
     if imdb and imdb.get('poster'):
         try:
-            send=await message.reply_photo(photo=imdb.get('poster'), caption=cap[:1024], reply_markup=InlineKeyboardMarkup(btn))
+            pic_fi=await message.reply_photo(photo=imdb.get('poster'), caption=cap[:1024],
+                                      reply_markup=InlineKeyboardMarkup(btn))
+            try:
+                if settings['auto_delete']:
+                    await asyncio.sleep(600)
+                    await pic_fi.delete()
+                    await message.delete()
+            except KeyError:
+                grpid = await active_connection(str(message.from_user.id))
+                await save_group_settings(grpid, 'auto_delete', True)
+                settings = await get_settings(message.chat.id)
+                if settings['auto_delete']:
+                    await asyncio.sleep(600)
+                    await pic_fi.delete()
+                    await message.delete()
         except (MediaEmpty, PhotoInvalidDimensions, WebpageMediaEmpty):
             pic = imdb.get('poster')
             poster = pic.replace('.jpg', "._V1_UX360.jpg")
-            send=await message.reply_photo(photo=poster, caption=cap[:1024], reply_markup=InlineKeyboardMarkup(btn))
+            pic_fil=await message.reply_photo(photo=poster, caption=cap[:1024], reply_markup=InlineKeyboardMarkup(btn))
+            try:
+                if settings['auto_delete']:
+                    await asyncio.sleep(600)
+                    await pic_fil.delete()
+                    await message.delete()
+            except KeyError:
+                grpid = await active_connection(str(message.from_user.id))
+                await save_group_settings(grpid, 'auto_delete', True)
+                settings = await get_settings(message.chat.id)
+                if settings['auto_delete']:
+                    await asyncio.sleep(600)
+                    await pic_fil.delete()
+                    await message.delete()
         except Exception as e:
             logger.exception(e)
-            send=await message.reply_photo(photo=NOR_IMG, caption=cap, reply_markup=InlineKeyboardMarkup(btn))
+            no_pic=await message.reply_photo(photo=NOR_IMG, caption=cap, reply_markup=InlineKeyboardMarkup(btn))
+            try:
+                if settings['auto_delete']:
+                    await asyncio.sleep(600)
+                    await no_pic.delete()
+                    await message.delete()
+            except KeyError:
+                grpid = await active_connection(str(message.from_user.id))
+                await save_group_settings(grpid, 'auto_delete', True)
+                settings = await get_settings(message.chat.id)
+                if settings['auto_delete']:
+                    await asyncio.sleep(600)
+                    await no_pic.delete()
+                    await message.delete()
     else:
-        send=await message.reply_photo(photo=NOR_IMG, caption=cap, reply_markup=InlineKeyboardMarkup(btn))
-    if spoll: await msg.message.delete()
-    mention = message.from_user.mention
-    grp_id = message.chat.id
-    try:
-        await asyncio.sleep(DEL_TIME)
-        await message.delete(True)
-        await send.delete(True)
-    except Exception as e:
-        logger.exception(e)
-        await asyncio.sleep(DEL_TIME)
-        await message.delete(True)
-        await send.delete(True)
-    sts = await client.send_message(grp_id, script.AFTER_TXT.format(mention))
-    await asyncio.sleep(30)
-    await sts.delete()
-      
+        no_fil=await message.reply_photo(photo=NOR_IMG, caption=cap, reply_markup=InlineKeyboardMarkup(btn))
+        try:
+            if settings['auto_delete']:
+                await asyncio.sleep(600)
+                await no_fil.delete()
+                await message.delete()
+        except KeyError:
+            grpid = await active_connection(str(message.from_user.id))
+            await save_group_settings(grpid, 'auto_delete', True)
+            settings = await get_settings(message.chat.id)
+            if settings['auto_delete']:
+                await asyncio.sleep(600)
+                await no_fil.delete()
+                await message.delete()
+    if spoll:
+        await msg.message.delete()
+
 
 async def advantage_spell_chok(client, msg):
     mv_id = msg.id
@@ -1258,7 +1295,6 @@ async def advantage_spell_chok(client, msg):
         k = await msg.reply(script.I_CUDNT.format(reqstr.mention))
         await asyncio.sleep(8)
         await k.delete()
-        await msg.delete()
         return
     movielist = [] #error fixed
     if not movies:
@@ -1274,7 +1310,6 @@ async def advantage_spell_chok(client, msg):
         )
         await asyncio.sleep(30)
         await k.delete()
-        await msg.delete()
         return
     movielist += [movie.get('title') for movie in movies]
     movielist += [f"{movie.get('title')} {movie.get('year')}" for movie in movies]
@@ -1297,17 +1332,15 @@ async def advantage_spell_chok(client, msg):
 
     try:
         if settings['auto_delete']:
-            await asyncio.sleep(DEL_TIME)
+            await asyncio.sleep(600)
             await spell_check_del.delete()
-            await msg.delete()
     except KeyError:
             grpid = await active_connection(str(message.from_user.id))
             await save_group_settings(grpid, 'auto_delete', True)
             settings = await get_settings(message.chat.id)
             if settings['auto_delete']:
-                await asyncio.sleep(DEL_TIME)
+                await asyncio.sleep(600)
                 await spell_check_del.delete()
-                await msg.delete()
 
 async def manual_filters(client, message, text=False):
     group_id = message.chat.id
