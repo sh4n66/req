@@ -14,7 +14,7 @@ aiofiles
 ffmpeg-python
 ffmpeg
 youtube_search
-
+youtube_search_python
 youtube-search-python==1.4.6
 yt-dlp
 youtube-dl
@@ -30,8 +30,8 @@ pyshorteners
 countryinfo
 datetime
 pytz
-dnspython==2.3.0
-
+dnspython==2.3.0 
+aiohttp
 python-math
 Pillow
 speedtest-cli
