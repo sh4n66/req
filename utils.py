@@ -276,7 +276,7 @@ def split_quotes(text: str) -> List:
     while counter < len(text):
         if text[counter] == "\\":
             counter += 1
-            elif text[counter] == text[0] or (text[0] == SMART_OPEN and text[counter] == SMART_CLOSE):
+        elif text[counter] == text[0] or (text[0] == SMART_OPEN and text[counter] == SMART_CLOSE):
             break
         counter += 1
     else:
