@@ -24,6 +24,7 @@ async def broadcast_function(bot, message):
         except FloodWait as e:
             await asyncio.sleep(e.value)
             await b_msg.copy(chat_id=user_id)
+            success += 1    
         except InputUserDeactivated:
             await db.delete_user(user_id)
             logging.info(f"{user_id} - Removed from Database, since deleted account.")
