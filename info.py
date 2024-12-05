@@ -10,7 +10,7 @@ import json
 from collections import defaultdict
 from typing import Dict, List, Union
 from pyrogram import Client
-REQ_CHANNEL=environ.get("REQ_CHANNEL", '-1002404722675')
+REQ_CHANNEL=environ.get("REQ_CHANNEL", 'False')
 
 load_dotenv("./dynamic.env", override=True)
 id_pattern = re.compile(r'^.\d+$')
