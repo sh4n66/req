@@ -44,9 +44,9 @@ class evamaria(Client):
 
 # Bot information
 SESSION = environ.get('SESSION', 'Media_search')
-API_ID = int(environ.get('API_ID', '6620972'))
-API_HASH = environ.get('API_HASH', '3f6835286b03e000ab6d71b37cc35b92')
-BOT_TOKEN = environ.get('BOT_TOKEN', '1875106070:AAHzPgACHUFzrkPN80CEQqW0hjjR5j3ReuM')
+API_ID = int(environ.get('API_ID', ''))
+API_HASH = environ.get('API_HASH', '')
+BOT_TOKEN = environ.get('BOT_TOKEN', '')
 
 # Bot settings
 CACHE_TIME = int(environ.get('CACHE_TIME', 300))
@@ -62,8 +62,8 @@ MELCOW_VID = environ.get('MELCOW_VID',"https://telegra.ph/file/b26637d70f3630a7e
 
 
 # Admins, Channels & Users
-ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '800422840').split()]
-CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '-1001313077108 -1001183379468 -1001541833234 -1001360054392 -1001461414940 -1001560229440 -1001699869862 -1001684929417 -1001591716856 -1001313077108 -1001765720202').split()]
+ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '').split()]
+CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '').split()]
 auth_users = [int(user) if id_pattern.search(user) else user for user in environ.get('AUTH_USERS', '').split()]
 AUTH_USERS = (auth_users + ADMINS) if auth_users else []
 auth_grp = environ.get('AUTH_GROUP')
@@ -76,24 +76,24 @@ TMP_DOWNLOAD_DIRECTORY = environ.get("TMP_DOWNLOAD_DIRECTORY", "./DOWNLOADS/")
 COMMAND_HAND_LER = environ.get("COMMAND_HAND_LER", "/")
 
 # MongoDB information
-DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://CT2024:CT2024@cluster0.qauwtfx.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
+DATABASE_URI = environ.get('DATABASE_URI', "")
 DATABASE_NAME = environ.get('DATABASE_NAME', "Cluster0")
 COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Telegram_files')
-MONGO_URL = os.environ.get('MONGO_URL', "mongodb+srv://CT2024:CT2024@cluster0.qauwtfx.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
+MONGO_URL = os.environ.get('MONGO_URL', "")
 
 #Downloader
 DOWNLOAD_LOCATION = environ.get("DOWNLOAD_LOCATION", "./DOWNLOADS/AudioBoT/")
 
 # Others
-DELETE_CHANNELS = [int(dch) if id_pattern.search(dch) else dch for dch in environ.get('DELETE_CHANNELS', '-1001854838291').split()]
+DELETE_CHANNELS = [int(dch) if id_pattern.search(dch) else dch for dch in environ.get('DELETE_CHANNELS', '').split()]
 PORT = os.environ.get("PORT", "7202")
 MAX_BTN = int(environ.get('MAX_BTN', "10"))
 S_GROUP = environ.get('S_GROUP',"https://t.me/Cinemathattakam_Group")
 MAIN_CHANNEL = environ.get('MAIN_CHANNEL',"https://t.me/CT_Arena")
-FILE_FORWARD = environ.get('FILE_FORWARD',"https://t.me/+4qMuaDXG8CgzNjE9")
+FILE_FORWARD = environ.get('FILE_FORWARD',"")
 MSG_ALRT = environ.get('MSG_ALRT', '𝐓𝐡𝐚𝐧𝐤 𝐲𝐨𝐮 𝐃𝐫 സാത്താൻ 𝐒𝐢𝐫 💜')
-FILE_CHANNEL = int(environ.get('FILE_CHANNEL', "-1002255626298"))
-LOG_CHANNEL = int(environ.get('LOG_CHANNEL', "-1001527063961"))
+FILE_CHANNEL = int(environ.get('FILE_CHANNEL', ""))
+LOG_CHANNEL = int(environ.get('LOG_CHANNEL', ""))
 SUPPORT_CHAT = environ.get('SUPPORT_CHAT', 'CT_Arena')
 AUTO_DELETE = is_enabled((environ.get('AUTO_DELETE', "True")), True)
 P_TTI_SHOW_OFF = is_enabled((environ.get('P_TTI_SHOW_OFF', "False")), False)
