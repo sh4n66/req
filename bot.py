@@ -11,6 +11,7 @@ logging.getLogger("imdbpy").setLevel(logging.ERROR)
 import os
 import sys
 
+from pyrogram import utils as pyroutils
 from pyrogram import Client, __version__, filters
 from pyrogram.raw.all import layer
 from database.ia_filterdb import Media
@@ -25,6 +26,10 @@ from datetime import date, datetime
 import pytz
 from aiohttp import web
 from plugins import web_server
+
+
+pyroutils.MIN_CHAT_ID = -999999999999
+pyroutils.MIN_CHANNEL_ID = -100999999999999
 
 class Bot(Client):
 
