@@ -43,18 +43,14 @@ async def start(client, message):
         await client.send_message(LOG_CHANNEL, script.LOG_TEXT_P.format(message.from_user.id, message.from_user.mention))
     if len(message.command) != 2:
         buttons = [[
-            InlineKeyboardButton('⚚ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ⚚', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
+            InlineKeyboardButton('🔞 Cʟɪᴄᴋ Fᴏʀ Fʀᴇᴇ Wᴇʙ Sᴇʀɪᴇs 🔞', url=f'https://t.me/+RkNQ8qFWP5liYTll')
+            ],[     
+            InlineKeyboardButton('⚠️ Fᴏʀ 18+ (ᴘʀᴇᴍɪᴜᴍ) ⚠️ ', url=f'https://t.me/+FxNmUWU2UIszZDZl'),
             ],[
-            InlineKeyboardButton('💫 ᴄʀᴇᴅɪᴛs 💫', callback_data="credit_info"),
-            InlineKeyboardButton('🔱 ᴏᴡɴᴇʀ 🔱', callback_data="owner_info")
-            ],[      
-            InlineKeyboardButton('⚠️ ʜᴇʟᴘ ⚠️ ', callback_data='help2'),
-            InlineKeyboardButton('✨ ᴀʙᴏᴜᴛ ✨', callback_data='about')
-            ],[
-            InlineKeyboardButton('🥇 sᴜᴘᴘᴏʀᴛ 🥇', callback_data="group_info")
+            InlineKeyboardButton('Fʀᴇᴇ ᴀᴅᴜʟᴛ ᴄʜᴀɴɴᴇʟ 😍', url=f'https://t.me/+s2f49t6Ma0YyYWE9')
         ]]         
         reply_markup = InlineKeyboardMarkup(buttons)
-        m=await message.reply_sticker("CAACAgUAAxkBAAEOZdNj2S9tlg8fCuHg5gJ_MLJj3A3GXwACGAcAAimzaVe-HiqPelAOoB4E") 
+        m=await message.reply_sticker("CAACAgUAAxkBAAK0KmiQY1gqJfSrpuuhpsmc4zrFnzcRAAIYBQACr7ZIVuku3815Gwq8NgQ") 
         await asyncio.sleep(3)
         await m.delete()
         await message.reply_photo(
@@ -69,15 +65,11 @@ async def start(client, message):
             await ForceSub(client, message)
             return
         buttons = [[
-            InlineKeyboardButton('⚚ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ⚚', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
+            InlineKeyboardButton('🔞 Cʟɪᴄᴋ Fᴏʀ Fʀᴇᴇ Wᴇʙ Sᴇʀɪᴇs 🔞', url=f'https://t.me/+RkNQ8qFWP5liYTll')
+            ],[     
+            InlineKeyboardButton('⚠️ Fᴏʀ 18+ (ᴘʀᴇᴍɪᴜᴍ) ⚠️ ', url=f'https://t.me/+FxNmUWU2UIszZDZl'),
             ],[
-            InlineKeyboardButton('💫 ᴄʀᴇᴅɪᴛs 💫', callback_data="credit_info"),
-            InlineKeyboardButton('🔱 ᴏᴡɴᴇʀ 🔱', callback_data="owner_info")
-            ],[      
-            InlineKeyboardButton('⚠️ ʜᴇʟᴘ ⚠️', callback_data='help2'),
-            InlineKeyboardButton('✨ ᴀʙᴏᴜᴛ ✨', callback_data='about')
-            ],[
-            InlineKeyboardButton('🥇 sᴜᴘᴘᴏʀᴛ 🥇', callback_data="group_info")
+            InlineKeyboardButton('Fʀᴇᴇ ᴀᴅᴜʟᴛ ᴄʜᴀɴɴᴇʟ 😍', url=f'https://t.me/+s2f49t6Ma0YyYWE9')
         ]]         
         reply_markup = InlineKeyboardMarkup(buttons)
         await message.reply_photo(
