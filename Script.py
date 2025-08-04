@@ -1,5 +1,5 @@
 class script(object):
-    START_TXT ="""<b>Hᴇʏ {}, ɪᴍ  ᴀɴ Aᴡᴇsᴏᴍᴇ Aᴜᴛᴏ + Mᴀɴᴜᴀʟ Fɪʟᴛᴇʀ + Gʀᴏᴜᴘ Mᴀɴᴀɢᴇʀ Bᴏᴛ.
+    START_TXT ="""<b>Hᴇʏ {}, Hᴇʟʟᴏ 👋 Jᴏɪɴ Fᴏʀ ᴇxᴄʟᴜsɪᴠᴇ Cᴏɴᴛᴇɴᴛ 😍 Eᴘɪᴄ 💫 Cᴏʟʟᴇᴄᴛɪᴏɴs.
     
 Aᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ᴛᴏ sᴇᴇ ᴛʜᴇ ᴍᴀɢɪᴄ ᴏʀ ʀᴇᴀᴅ ᴍᴏʀᴇ ғʀᴏᴍ ᴛʜᴇ ᴍᴇɴᴜ ʙᴇʟᴏᴡ<b>"""
     HELP_TXT = """<b>ʜᴇʏ {}
@@ -307,8 +307,7 @@ Aᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ᴛᴏ sᴇᴇ ᴛʜᴇ ᴍᴀɢ�
     CUSTOM_FILE_CAPTION = """<b>📂Fɪʟᴇɴᴀᴍᴇ : <code>{file_name}</code>
 
 ╔═════•✧❅✦❅✧•═════╗
-▣ <a href=https://t.me/cinemathattakam_Group>[CT™] 📽സിനിമ തട്ടകം​</a>
-▣ <a href=https://t.me/CT_Arena>[CT™] 📽സിനിമ തട്ടകം​</a>
+▣ <a href=https://t.me/+QtO2W9-oBpdlMTU9>Aɴᴏɴʏᴍᴏᴜs Mᴀʟʟᴜ​</a>
 ╚═════•✧❅✦❅✧•═════╝</b>"""
 
     RESTART_TXT = """
