@@ -302,7 +302,7 @@ Aᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ᴛᴏ sᴇᴇ ᴛʜᴇ ᴍᴀɢ�
     CUSTOM_FILE_CAPTION = """<b>📂Fɪʟᴇɴᴀᴍᴇ : <code>{file_name}</code>
 
 ╔═════•✧❅✦❅✧•═════╗
-▣ <a href=https://t.me/+XC6zAV68k041N2I1>Aɴᴏɴʏᴍᴏᴜs Mᴀʟʟᴜ​</a>
+▣ <a href=https://t.me/+s2f49t6Ma0YyYWE9>Aɴᴏɴʏᴍᴏᴜs Mᴀʟʟᴜ​</a>
 ╚═════•✧❅✦❅✧•═════╝</b>"""
 
     RESTART_TXT = """
