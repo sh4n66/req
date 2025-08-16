@@ -65,7 +65,7 @@ async def start(client, message):
             await ForceSub(client, message)
             return
         buttons = [[
-            InlineKeyboardButton('🔞 Cʟɪᴄᴋ Fᴏʀ Fʀᴇᴇ Wᴇʙ Sᴇʀɪᴇs 🔞', url=f'https://t.me/+RkNQ8qFWP5liYTll')
+            InlineKeyboardButton('🔞 Cʟɪᴄᴋ Fᴏʀ Fʀᴇᴇ Wᴇʙ Sᴇʀɪᴇs 🔞', url=f'https://t.me/+Whk7RNJ8fQ8xZWU9')
             ],[     
             InlineKeyboardButton('⚠️ Fᴏʀ 18+ (ᴘʀᴇᴍɪᴜᴍ) ⚠️ ', url=f'https://t.me/+FxNmUWU2UIszZDZl'),
             ],[
