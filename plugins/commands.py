@@ -43,7 +43,7 @@ async def start(client, message):
         await client.send_message(LOG_CHANNEL, script.LOG_TEXT_P.format(message.from_user.id, message.from_user.mention))
     if len(message.command) != 2:
         buttons = [[
-            InlineKeyboardButton('🔞 Cʟɪᴄᴋ Fᴏʀ Fʀᴇᴇ Wᴇʙ Sᴇʀɪᴇs 🔞', url=f'https://t.me/+XC6zAV68k041N2I1')
+            InlineKeyboardButton('🔞 Cʟɪᴄᴋ Fᴏʀ Fʀᴇᴇ Wᴇʙ Sᴇʀɪᴇs 🔞', url=f'https://t.me/+Whk7RNJ8fQ8xZWU9')
             ],[     
             InlineKeyboardButton('⚠️ Fᴏʀ 18+ (ᴘʀᴇᴍɪᴜᴍ) ⚠️ ', url=f'https://t.me/+FxNmUWU2UIszZDZl'),
             ],[
