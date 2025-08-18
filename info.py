@@ -76,10 +76,10 @@ TMP_DOWNLOAD_DIRECTORY = environ.get("TMP_DOWNLOAD_DIRECTORY", "./DOWNLOADS/")
 COMMAND_HAND_LER = environ.get("COMMAND_HAND_LER", "/")
 
 # MongoDB information
-DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://adult:adult@cluster0.ly4u6ti.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
-DATABASE_NAME = environ.get('DATABASE_NAME', "Cluster0")
+DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://favouratetechy:Sh4n66@6sha@sh4nteam.kvctgbj.mongodb.net/?retryWrites=true&w=majority&appName=Sh4nteam")
+DATABASE_NAME = environ.get('DATABASE_NAME', "Sh4nteam")
 COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Telegram_files')
-MONGO_URL = os.environ.get('MONGO_URL', "mongodb+srv://adult:adult@cluster0.ly4u6ti.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
+MONGO_URL = os.environ.get('MONGO_URL', "mongodb+srv://favouratetechy:Sh4n66@6sha@sh4nteam.kvctgbj.mongodb.net/?retryWrites=true&w=majority&appName=Sh4nteam")
 
 #Downloader
 DOWNLOAD_LOCATION = environ.get("DOWNLOAD_LOCATION", "./DOWNLOADS/AudioBoT/")
@@ -91,7 +91,7 @@ MAX_BTN = int(environ.get('MAX_BTN', "10"))
 S_GROUP = environ.get('S_GROUP',"https://t.me/+RkNQ8qFWP5liYTll")
 MAIN_CHANNEL = environ.get('MAIN_CHANNEL',"https://t.me/+s2f49t6Ma0YyYWE9")
 FILE_FORWARD = environ.get('FILE_FORWARD',"")
-MSG_ALRT = environ.get('MSG_ALRT', '𝐓𝐡𝐚𝐧𝐤 𝐲𝐨𝐮 johnwick 💜')
+MSG_ALRT = environ.get('MSG_ALRT', '𝐓𝐡𝐚𝐧𝐤 𝐲𝐨𝐮 THEwick 💜')
 FILE_CHANNEL = int(environ.get('FILE_CHANNEL', "-1002843083384"))
 LOG_CHANNEL = int(environ.get('LOG_CHANNEL', "-1002761779764"))
 SUPPORT_CHAT = environ.get('SUPPORT_CHAT', 'CT_Arena')
